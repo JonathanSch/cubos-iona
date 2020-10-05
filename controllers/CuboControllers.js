@@ -20,7 +20,7 @@ module.exports = {
     },
     findOne: async (req, res) => {
         try {
-            const cubo = await CuboServices.findOne({ nombre: req.body.nombre })
+            const cubo = await CuboServices.findOne({ nombre: req.params.nombre })
             res.send(cubo).status(200)
         } catch (error) {
             res.send(error).status(400);
