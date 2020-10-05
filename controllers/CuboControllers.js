@@ -1,5 +1,4 @@
 const CuboServices = require('../services/CuboServices');
-const services = require('../services/CuboServices')
 
 module.exports = {
     create: async (req, res) => {
