@@ -6,8 +6,9 @@ module.exports = {
         const usuario = new Usuario(body)
         return usuario.save()
     },
-    findByUser: (user) => {
-        const usuario = Usuario.findOne({ 'nombreUsuario': `${user.nombreUsuario}` })
+    findByUser:  async (user) => { 
+        const usuario = await Usuario.findOne({ 'nombreUsuario': `${user.nombreUsuario}` });
+        console.log(usuario)
         return usuario
     },
     addCubes :async function (user){
