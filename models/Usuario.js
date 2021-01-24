@@ -9,6 +9,10 @@ const UsuarioSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    cubos:{
+        type:Array,
+        default : [],
     }
 })
 UsuarioSchema.pre('save', function (next) {

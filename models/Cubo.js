@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const CuboSchma = new mongoose.Schema({
+const CuboSchema = new mongoose.Schema({
     imagen: {
         type: String,
         required: true,
@@ -14,9 +14,11 @@ const CuboSchma = new mongoose.Schema({
         type: Number,
         required: true
     },
+    
+
 
 })
 
-const Cubo = mongoose.model('Cubo', CuboSchma)
+const Cubo = mongoose.model('Cubo', CuboSchema)
 
 module.exports = Cubo
